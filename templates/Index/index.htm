@@ -1,0 +1,104 @@
+
+
+
+
+<textarea style="margin-top:5px;
+width:600px;
+height:70px;
+border:2px solid}" value="发布请求!"/></textarea>
+<input type="submit" name="submit" value="发布"/>
+
+
+
+<div class="content" id="top-adv"><img src="<{$t_dir}>img/top-adv.gif" alt="" /></div>
+<div class="content">
+     <div id="left-nav-bar" class="bg_white">
+	      <p id="top-contact-info">
+		  姓名：Maciez<br />
+		  邮箱：<{$sm_config[5]}><br />
+		  手机：<{$sm_config[4]}><br />
+		  地址：警察局
+		  </p>
+
+
+
+  </div>
+  <div id="right-cnt">
+	      <div class="col_center">
+	        <div class="sub-title"><h2>最新新闻</h2><span><a href="#" class="cblue">MORE</a></span><br class="clear" />
+	        </div>
+			<ul>
+
+
+			    <{section name=l loop=$sm_news}>
+			    <li><a href="view.php?id=<{$sm_news[l].id}>&cid=<{$sm_news[l].cid}>"><{$sm_news[l].title}></a></li>
+                <{/section}>
+
+
+
+			</ul>
+		  </div>
+	      <div class="col_center right">
+	        <div class="sub-title"><h2>公司简介</h2><span><a href="#" class="cblue">MORE</a></span><br class="clear" /></div>
+			<p id="intro">
+			入贯彻落实科学发展观的自觉性和坚定性湖南一
+考生高考4门课程故意考零分温家宝调研太湖污染代表
+中央向居民致歉.[<a href="#" class="cgray">详细</a>]           </p>
+		  </div><br class="clear" />
+<!--		  <div id="m_adv"><img src="<{$t_dir}>img/m-adv.gif" width="630" height="146" /></div> -->
+
+		    <div class="pages"><h2>产品展示</h2><span>产品分类：展示 | 展示 | 展示 | 展示 | 展示 | 展示 | 展示 | 展示 | 展示</span><div id="more"><a href="#" class="cblue">MORE</a></div>
+		    <br class="clear" /></div>
+			<ul id="products-list">
+			    <li>
+				<img src="<{$t_dir}>img/product.jpg" alt=" " width="326" height="119" />
+				<h3>产品展示</h3>
+				<ul>
+				    <li>规格：</li>
+				    <li>产地：</li>
+				    <li>价格：1200 <span>[<a href="#" class="cdred">详细</a>]</span></li>
+				</ul>
+				</li>
+			    <li>
+				<img src="<{$t_dir}>img/product.jpg" alt=" " width="326" height="119" />
+				<h3>产品展示</h3>
+				<ul>
+				    <li>规格：</li>
+				    <li>产地：</li>
+				    <li>价格：1200 <span>[<a href="#" class="cdred">详细</a>]</span></li>
+				</ul>
+				</li>
+			    <li>
+				<img src="<{$t_dir}>img/product.jpg" alt=" " width="326" height="119" />
+				<h3>产品展示</h3>
+				<ul>
+				    <li>规格：</li>
+				    <li>产地：</li>
+				    <li>价格：1200 <span>[<a href="#" class="cdred">详细</a>]</span></li>
+				</ul>
+				</li>
+			    <li>
+				<img src="<{$t_dir}>img/product.jpg" alt=" " width="326" height="119" />
+				<h3>产品展示</h3>
+				<ul>
+				    <li>规格：</li>
+				    <li>产地：</li>
+				    <li>价格：1200 <span>[<a href="#" class="cdred">详细</a>]</span></li>
+				</ul>
+				</li>
+			</ul><br class="clear" />
+  </div>
+
+  <br class="clear" />
+</div>
+<div id="about">
+     <div class="content">
+	      <span class="left"><a href="#">网店首页</a> | <a href="#">公司介绍</a> | <a href="#">资质认证</a> | <a href="#">产品展示</a> | <a href="#">视频网店</a> | <a href="#">招商信息</a> | <a href="#">招聘信息</a> | <a href="#">促销活动</a> | <a href="#">企业资讯</a> </span>
+		  <span class="right">联系电话：<{$sm_config[4]}> 联系邮箱：<{$sm_config[5]}></span>
+	 </div>
+</div>
+<p id="copyright">
+此模版由 <a href="http://www.psvi.net">视觉前沿</a> 收集整理--仅供学习参考 切勿用于商业用途
+</p>
+</body>
+</html>

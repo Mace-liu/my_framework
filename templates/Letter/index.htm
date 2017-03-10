@@ -1,0 +1,22 @@
+<style type="text/css">
+.letter_list{background-color:#CCCCCC;width:500px;height:100px;margin-top:5px;}
+.username{float:left}
+.time{float:left;margin-left:10px}
+.letter_content{margin-top:5px}
+</style>
+<div>我收到的信：</div>
+
+<{section name=l loop=$letter}>
+<div class="letter_list">
+<div class="title"><h3><{$letter[l].title}></h3></div>
+<div style="margin-top:5px">
+<div class="username">来自 <a href="index.php?controller=my&userid=<{$letter[l].f_id}>"><{$letter[l].f_id	}></a></div>
+<div class="time"><{$letter[l].time}></div>
+</div>
+&nbsp;<div class="letter_content"><{$letter[l].content}></div>
+</div>
+<{/section}>
+
+
+
+

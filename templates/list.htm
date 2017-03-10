@@ -1,0 +1,50 @@
+<div class="main">
+
+<div class="pages">
+<h2>类别</h2>
+<span>新闻标题</span>
+<div id="more"><a href="#">时间</a></div>
+</div>
+<div class="pages">
+<h2><{$sm_myclass[0].myclass}></h2>
+
+</div>
+<{section name=l loop=$sm_mynews}>
+<div class="pages1">
+<h2><{$sm_mynews[l].class}></h2>
+<span><a href="index.php?controller=view&id=<{$sm_mynews[l].id}>&cid=<{$sm_mynews[l].cid}>"><{$sm_mynews[l].title}></sa></span>
+<div id="more"><a href="#"><{$sm_mynews[l].time}></a></div>
+</div>
+<{/section}> <br class="clear" />
+</div>
+</div>
+
+</div>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br class="clear" />
+</div>
+<div id="about">
+<div class="content"><span class="left"><a href="#">网店首页</a>
+| <a href="#">公司介绍</a> | <a href="#">资质认证</a> | <a href="#">产品展示</a> | <a
+	href="#">视频网店</a> | <a href="#">招商信息</a> | <a href="#">招聘信息</a> | <a
+	href="#">促销活动</a> | <a href="#">企业资讯</a> | <a href="#">联系我们</a></span> <span
+	class="right">目前已有[134987775]次点击</span></div>
+</div>
+<p id="copyright">此模版由 <a href="http://www.psvi.net">视觉前沿</a>
+收集整理--仅供学习参考 切勿用于商业用途</p>
+</body>
+</html>

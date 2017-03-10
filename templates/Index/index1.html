@@ -1,0 +1,94 @@
+
+<link href="<{$t_dir}>css/index_layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function message_check(){
+	var date_title = document.getElementById("date_title");
+	var date_time = document.getElementById("date_time");
+	var date_place = document.getElementById("date_place");
+	var date_numbers = document.getElementById("date_numbers");
+	
+	if(date_title.value.length<2){
+	  alert('标题应大于两个字符！');
+	}
+	else if(date_time.value.length<2){
+	  alert('时间应大于两个字符！');
+	}
+	else if(date_place.value.length<2){
+	  alert('地点应大于两个字符！');
+	}
+	else if(date_numbers.value.length<1){
+	  alert('请填写需要人数！');
+	}
+	
+
+
+
+}
+
+</script>
+<body>
+
+
+<div id="main">
+
+<div>
+	<form name="post_message" action="" method="post">
+
+	<div style="padding-top:55px">
+		运动种类&nbsp;:&nbsp;<select name="s_id">
+		<option value="1">足球</option>
+		<option value="2">篮球</option>
+		<option value="3">台球</option>
+		<option value="4">乒乓球</option>
+		</select>
+		标题&nbsp;:&nbsp;<input type="text" name="date_title" id="date_title"/>
+	</div>
+	<div style="padding-top:10px">
+		时&nbsp;&nbsp;&nbsp;&nbsp;间&nbsp;:&nbsp;<input type="text" name="date_time" id="date_time"/>
+		地点&nbsp;:&nbsp;<input type="text" name="date_place" id="date_place"/>
+		人数&nbsp;:&nbsp;<input type="text" name="date_numbers" id="date_numbers"/>
+	</div>
+
+	<div style="margin-top:10px;margin-bottom:10px">
+		<div style="float:left;margin-top:5px;wi">详细信息&nbsp;:&nbsp;</div><textarea id="date_remark"  name="date_remark" style="border:solid 1px;margin-top:5px;width:600px;height:100px;font-size: 15px;font-family: 黑体;"></textarea>
+		<input type="submit" onClick="message_check()" value="发布"/>
+	</div>
+	</form>
+</div>
+
+
+<hr/>
+
+<div id="list_message">
+
+
+
+<{section  name=l loop=$feed}>
+<div>
+<div><img class="list_message_avatar" src="<{$feed[l].img_url}>"></div>
+<div class="list_message_content">
+<div class="list_message_header"><a href="index.php?controller=my&userid=<{$feed[l].id}>"><{$feed[l].name}></a> 发布了求战信息  <{$feed[l].time_r}></div>
+<div class="list_message_title"><p><{$feed[l].date_title}></p></div>
+<div class="list_message_note">项目:<a href="index.php?controller=search"><!--  利用搜索显示对应项目相关信息  --> <{$feed[l].cname}></a> | 时间:<{$feed[l].date_time}> | 地点:<{$feed[l].date_place}> | 需要人数:<{$feed[l].date_numbers}>人</div>
+<div class="list_message_remark">详细说明：<{$feed[l].date_remark}></div>
+<div class="list_message_header"><a href="#">我要应战</a> <a href="#">相关评论</a></div>
+</div>
+</div>
+
+<hr id="message"/>
+
+<{/section}>
+
+
+
+
+
+</div>
+
+<div id="right_banner">right_banner</div>
+
+</div>
+<hr id="message"/>
+<a href="http://www.baidu.com"><div id="banner">banner</div></a>
+
+</body>
